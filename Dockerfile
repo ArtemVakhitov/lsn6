@@ -7,5 +7,5 @@ WORKDIR boxfuse-sample-java-war-hello
 RUN mvn package
 RUN cp target/hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
-RUN chown -R root:tomcat /var/lib/tomcat9/conf/server.xml
+RUN chown -R root:tomcat /usr/share/tomcat9/conf/server.xml
 CMD ["/usr/share/tomcat9/bin/catalina.sh", "run"]
