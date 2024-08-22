@@ -8,4 +8,5 @@ RUN mvn package
 RUN cp target/hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
 ENV CATALINA_BASE=/var/lib/tomcat9
+ENV CATALINA_HOME=/usr/share/tomcat9
 CMD ["catalina.sh", "run"]
